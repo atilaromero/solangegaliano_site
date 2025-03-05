@@ -495,6 +495,26 @@ footer {
     margin-bottom: 0.5rem;
 }
 
+.approach-section .cbt-link {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #8e723c;
+    color: white;
+}
+
 /* Mental Disorders Page Specific Styles */
 .disorders-intro {
     padding: 150px 20px 60px;
@@ -544,4 +564,117 @@ footer {
 
 .disorder-card p {
     font-size: 1rem;
+}
+
+/* Cognitive Distortions Page Specific Styles */
+.cognitive-distortions {
+    padding: 150px 20px 80px;
+}
+
+.cognitive-distortions .approach-section {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cognitive-distortions h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--accent-color);
+}
+
+.cognitive-distortions .intro-text {
+    font-size: 1.2rem;
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    text-align: center;
+    line-height: 1.8;
+}
+
+.distortions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 4rem;
+}
+
+.distortion-card {
+    background-color: var(--light-color);
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.distortion-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.distortion-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 10px;
+}
+
+.distortion-card p {
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+}
+
+.distortion-card .example {
+    background-color: rgba(173, 140, 75, 0.1);
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: auto;
+}
+
+.distortion-card .example h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--accent-color);
+}
+
+.distortion-card .example p {
+    font-style: italic;
+    margin-bottom: 0;
+}
+
+.cbt-resources {
+    background-color: white;
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.cbt-resources h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.cbt-resources p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+    .distortions-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cognitive-distortions h1 {
+        font-size: 2rem;
+    }
+    
+    .cognitive-distortions .intro-text,
+    .cbt-resources p {
+        font-size: 1rem;
+    }
 }
