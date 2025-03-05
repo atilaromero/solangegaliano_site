@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Add smooth scrolling for all links
+    // Handle smooth scrolling for same-page anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -26,4 +26,23 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
+
+    // Handle scroll to anchor if URL has hash on page load
+    if (window.location.hash) {
+        // Wait a moment for the page to load
+        setTimeout(() => {
+            const targetElement = document.querySelector(window.location.hash);
+            if (targetElement) {
+                // Add a slight offset to account for fixed header
+                const headerOffset = 100;
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                });
+            }
+        }, 300);
+    }
 });

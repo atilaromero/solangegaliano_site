@@ -8,6 +8,11 @@
     --bg-color: #ffffff;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px; /* Adjust based on your header height */
+}
+
 * {
     margin: 0;
     padding: 0;
